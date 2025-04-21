@@ -132,3 +132,9 @@ AÇÃO DO USUARIO: 2025/04/21 15:04:12 usuario_controller.go:51: Usuário criado
 AÇÃO DO USUARIO: 2025/04/21 15:05:09 usuario_controller.go:51: Usuário criado com sucessp
 AÇÃO DO SISTEMA: 2025/04/21 15:18:32 database.go:31: conectou ao banco de dados postgres
 ERRO: 2025/04/21 15:18:32 gin.go:57: Arquivo front não encontrado
+AÇÃO DO SISTEMA: 2025/04/21 15:28:42 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/21 15:28:42 gin.go:57: Arquivo front não encontrado
+ERRO: 2025/04/21 15:29:04 cliente_controller.go:68: Erro ao buscar o cliete record not found
+ERRO: 2025/04/21 15:29:28 cliente_controller.go:22: Erro ao ler JSON json: cannot unmarshal number into Go struct field Cliente.telefone of type string
+ERRO: 2025/04/21 15:29:43 cliente_controller.go:22: Erro ao ler JSON json: cannot unmarshal number into Go struct field Cliente.telefone of type string
+AÇÃO DO USUARIO: 2025/04/21 15:29:55 cliente_controller.go:41: Cliente cadastrado com sucesso 

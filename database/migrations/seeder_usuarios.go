@@ -13,7 +13,7 @@ var listaUsuarios = []models.Usuario{
 	{
 		Nome:            "admin",
 		Email:           "admin",
-		Telefone:        4735213850,
+		Telefone:        "4735213850",
 		Password:        "$2a$10$9RL6Ktc0tE3eSPiIA7x9g.AD9A6uW.CT4LcmQPU5jHL6HU5GR23UW",
 		UsuarioPerfilID: 1,
 	},
