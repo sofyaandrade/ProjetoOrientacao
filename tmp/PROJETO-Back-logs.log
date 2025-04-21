@@ -1,0 +1,134 @@
+AÇÃO DO SISTEMA: 2025/04/14 16:05:16 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/14 16:05:17 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/14 16:47:59 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/14 16:48:04 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/14 16:48:36 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/14 16:48:36 seeder_usuarios.go:67: não foi possível inserir usuários na tabela:  ERROR: insert or update on table "usuarios" violates foreign key constraint "fk_usuario_perfils_usuarios" (SQLSTATE 23503)
+ERRO: 2025/04/14 16:48:36 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/14 16:50:42 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/14 16:50:42 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/14 16:51:10 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/14 16:51:11 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/14 16:52:56 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/14 16:52:56 seeder_usuarios.go:67: não foi possível inserir usuários na tabela:  ERROR: insert or update on table "usuarios" violates foreign key constraint "fk_usuario_perfils_usuarios" (SQLSTATE 23503)
+ERRO: 2025/04/14 16:52:56 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/14 17:00:31 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/14 17:01:02 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/14 17:13:21 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/14 17:13:25 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/14 17:13:42 database.go:31: conectou ao banco de dados postgres
+AÇÃO DO SISTEMA: 2025/04/14 17:15:08 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/14 17:15:50 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/14 17:17:42 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/14 17:17:45 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/14 17:22:06 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/14 17:22:08 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/14 17:23:32 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/14 17:23:39 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/14 17:28:27 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/14 17:28:27 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/15 21:08:44 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/15 21:08:44 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/15 21:13:24 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/15 21:13:24 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/15 21:14:45 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/15 21:14:45 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/15 21:15:00 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/15 21:15:00 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/15 21:15:10 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/15 21:15:10 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/15 21:15:25 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/15 21:15:25 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/15 21:16:29 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/15 21:16:30 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/15 21:16:55 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/15 21:16:55 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/15 21:17:33 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/15 21:17:33 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/15 21:29:57 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/15 21:29:57 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/15 21:42:01 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/15 21:42:02 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/15 21:49:51 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/15 21:49:51 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/15 21:49:56 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/15 21:49:56 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/15 21:50:09 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/15 21:50:09 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/15 21:53:13 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/15 21:53:13 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/15 21:53:16 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/15 21:53:16 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/18 10:45:51 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/18 10:45:52 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/18 11:28:19 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/18 11:28:19 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/18 11:28:55 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/18 11:28:55 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/18 11:33:57 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/18 11:33:57 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/18 11:35:29 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/18 11:35:30 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/18 11:50:55 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/18 11:50:56 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/18 11:53:07 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/18 11:53:07 gin.go:57: log.arquivo.front.nao.encontrado
+AÇÃO DO SISTEMA: 2025/04/18 14:00:06 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/18 14:00:06 gin.go:57: Arquivo front não encontrado
+AÇÃO DO SISTEMA: 2025/04/18 14:04:47 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/18 14:04:48 gin.go:57: Arquivo front não encontrado
+ERRO: 2025/04/18 14:07:48 login_controller.go:32: Erro ao ler JSON invalid character '}' looking for beginning of object key string
+AÇÃO DO SISTEMA: 2025/04/18 14:08:52 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/18 14:08:52 gin.go:57: Arquivo front não encontrado
+AÇÃO DO SISTEMA: 2025/04/18 14:10:33 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/18 14:10:33 gin.go:57: Arquivo front não encontrado
+AÇÃO DO SISTEMA: 2025/04/18 14:11:23 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/18 14:11:24 gin.go:57: Arquivo front não encontrado
+AÇÃO DO SISTEMA: 2025/04/18 14:15:47 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/18 14:15:47 gin.go:57: Arquivo front não encontrado
+ERRO: 2025/04/18 14:15:51 usuario_controller.go:30: Usuário já cadastrado
+ERRO: 2025/04/18 14:16:00 usuario_controller.go:30: Usuário já cadastrado
+ERRO: 2025/04/18 14:16:52 usuario_controller.go:30: Usuário já cadastrado
+AÇÃO DO USUARIO: 2025/04/18 14:17:12 usuario_controller.go:52: Usuário criado com sucessp
+AÇÃO DO SISTEMA: 2025/04/21 14:22:15 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/21 14:22:15 gin.go:57: Arquivo front não encontrado
+AÇÃO DO USUARIO: 2025/04/21 14:22:37 avaliacao_controller.go:33: Avaliação criada com sucesso
+AÇÃO DO SISTEMA: 2025/04/21 14:26:23 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/21 14:26:23 gin.go:57: Arquivo front não encontrado
+ERRO: 2025/04/21 14:26:34 cliente_controller.go:68: Erro ao buscar o cliete avaliacaos: unsupported relations for schema Cliente
+AÇÃO DO SISTEMA: 2025/04/21 14:26:58 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/21 14:26:58 gin.go:57: Arquivo front não encontrado
+ERRO: 2025/04/21 14:27:03 cliente_controller.go:68: Erro ao buscar o cliete avaliacao: unsupported relations for schema Cliente
+AÇÃO DO SISTEMA: 2025/04/21 14:29:53 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/21 14:29:53 gin.go:57: Arquivo front não encontrado
+ERRO: 2025/04/21 14:29:56 cliente_controller.go:68: Erro ao buscar o cliete avaliacoes: unsupported relations for schema Cliente
+AÇÃO DO SISTEMA: 2025/04/21 14:30:41 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/21 14:30:41 gin.go:57: Arquivo front não encontrado
+AÇÃO DO SISTEMA: 2025/04/21 14:31:05 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/21 14:31:05 gin.go:57: Arquivo front não encontrado
+AÇÃO DO USUARIO: 2025/04/21 14:32:34 cliente_controller.go:132: Cliente criado com sucesso Fulana 0
+AÇÃO DO SISTEMA: 2025/04/21 14:43:15 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/21 14:43:16 gin.go:57: Arquivo front não encontrado
+AÇÃO DO SISTEMA: 2025/04/21 14:46:12 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/21 14:46:12 seeder_usuarios.go:27: Erro ao atualizar os registros existentes para is_sistema:  ERROR: column "is_sistema" does not exist (SQLSTATE 42703)
+ERRO: 2025/04/21 14:46:12 seeder_usuarios.go:45: não foi possível inserir usuários na tabela:  ERROR: insert or update on table "usuarios" violates foreign key constraint "fk_usuario_perfils_usuarios" (SQLSTATE 23503)
+ERRO: 2025/04/21 14:46:12 gin.go:57: Arquivo front não encontrado
+AÇÃO DO SISTEMA: 2025/04/21 14:48:15 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/21 14:48:16 gin.go:57: Arquivo front não encontrado
+AÇÃO DO USUARIO: 2025/04/21 14:48:41 cliente_controller.go:41: Cliente cadastrado com sucesso 
+AÇÃO DO SISTEMA: 2025/04/21 14:50:39 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/21 14:50:40 gin.go:57: Arquivo front não encontrado
+AÇÃO DO USUARIO: 2025/04/21 14:52:00 avaliacao_controller.go:33: Avaliação criada com sucesso
+AÇÃO DO USUARIO: 2025/04/21 14:52:17 cliente_controller.go:132: Cliente criado com sucesso Fulana 1
+AÇÃO DO USUARIO: 2025/04/21 14:53:02 avaliacao_controller.go:33: Avaliação criada com sucesso
+AÇÃO DO SISTEMA: 2025/04/21 14:57:33 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/21 14:57:33 gin.go:57: Arquivo front não encontrado
+AÇÃO DO SISTEMA: 2025/04/21 14:58:17 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/21 14:58:17 gin.go:57: Arquivo front não encontrado
+AÇÃO DO USUARIO: 2025/04/21 15:00:06 avaliacao_controller.go:33: Avaliação criada com sucesso
+AÇÃO DO SISTEMA: 2025/04/21 15:03:58 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/21 15:03:58 gin.go:57: Arquivo front não encontrado
+AÇÃO DO USUARIO: 2025/04/21 15:04:12 usuario_controller.go:51: Usuário criado com sucessp
+AÇÃO DO USUARIO: 2025/04/21 15:05:09 usuario_controller.go:51: Usuário criado com sucessp
+AÇÃO DO SISTEMA: 2025/04/21 15:18:32 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/04/21 15:18:32 gin.go:57: Arquivo front não encontrado

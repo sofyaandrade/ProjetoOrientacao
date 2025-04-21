@@ -1,0 +1,57 @@
+definitions:
+  models.ErrorResponse:
+    properties:
+      Error:
+        type: string
+    type: object
+  models.Login:
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+    type: object
+  models.RespostaLogin:
+    properties:
+      AccessToken:
+        type: string
+      RefreshToken:
+        type: string
+    type: object
+host: localhost:8420
+info:
+  contact: {}
+  title: PROJETO-Back
+  version: "1.0"
+paths:
+  /login/:
+    post:
+      consumes:
+      - application/json
+      description: Rota para realizar login do usuário
+      parameters:
+      - description: Modelo do login
+        in: body
+        name: login
+        required: true
+        schema:
+          $ref: '#/definitions/models.Login'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.RespostaLogin'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ErrorResponse'
+      summary: Realiza Login
+      tags:
+      - Autenticação
+swagger: "2.0"
