@@ -4,7 +4,7 @@ import { useAppDispatch } from "../../store/hooks";
 export const Home = (props: any) => {
     const dispatch = useAppDispatch()
     const toast = useRef<any>(null);
-
+//tabMenu
     return (
         <>
             <h2></h2>
@@ -12,3 +12,4 @@ export const Home = (props: any) => {
         </>
     )
 }
+

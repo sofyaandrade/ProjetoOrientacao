@@ -7,8 +7,8 @@ import store from './store/store';
 
 const AppWrapper = (props: any) => {
     const [colorScheme, setColorScheme] = useState('light');
-    const [theme, setTheme] = useState('orange');
-    const [componentTheme, setComponentTheme] = useState('orange');
+    const [theme, setTheme] = useState('teal');
+    const [componentTheme, setComponentTheme] = useState('teal');
 
     let location = useLocation();
 

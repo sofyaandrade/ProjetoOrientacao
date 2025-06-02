@@ -4,8 +4,6 @@ import { Navigate, Outlet, useLocation } from 'react-router-dom';
 
 import AppTopbar from './AppTopbar';
 import AppFooter from './AppFooter';
-import AppConfig from './AppConfig';
-import AppRightMenu from './AppRightMenu';
 import AppMenu from './AppMenu';
 
 import PrimeReact from 'primereact/api';
@@ -16,7 +14,6 @@ import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 import './App.scss';
 import { AuthContext } from './context/auth';
-import { useIntl } from 'react-intl';
 import { isStandalone } from './utils/envConfig';
 
 const App = (props: any) => {
@@ -49,30 +46,46 @@ const App = (props: any) => {
             icon: 'pi pi-home',
             to: '/'
         },
-    ]
 
-    const fullAppMenuItens = [
         {
-            label: 'Home',
-            icon: 'pi pi-home',
-            to: '/'
-        },
-        {
-            label: 'Configuração',
+            label: 'Aluno',
             icon: 'pi pi-cog',
             to: '/cadastro-aluno'
         },
         {
-            label: 'Configuração',
+            label: 'Instrutor',
             icon: 'pi pi-cog',
             to: '/cadastro-instrutor'
         },
         {
-            label: 'Configuração',
+            label: 'Avaliacao',
             icon: 'pi pi-cog',
             to: '/cadastro-avaliacao'
         },
-    ];
+    ]
+
+   const fullAppMenuItens = [
+    {
+        label: 'Home',
+        icon: 'pi pi-home',
+        to: '/'
+    },
+    {
+        label: 'Aluno',
+        icon: 'pi pi-cog',
+        to: '/cadastro-aluno'
+    },
+    {
+        label: 'Instrutor',
+        icon: 'pi pi-cog',
+        to: '/cadastro-instrutor'
+    },
+    {
+        label: 'Avaliacao',
+        icon: 'pi pi-cog',
+        to: '/cadastro-avaliacao'
+    },
+   ]
 
     const adminClienteAppMenuItens = [
         {
@@ -81,17 +94,17 @@ const App = (props: any) => {
             to: '/'
         },
         {
-            label: 'Configuração',
+            label: 'Aluno',
             icon: 'pi pi-cog',
             to: '/cadastro-aluno'
         },
         {
-            label: 'Configuração',
+            label: 'Instrutor',
             icon: 'pi pi-cog',
             to: '/cadastro-instrutor'
         },
         {
-            label: 'Configuração',
+            label: 'Avaliacao',
             icon: 'pi pi-cog',
             to: '/cadastro-avaliacao'
         },
@@ -376,24 +389,6 @@ const App = (props: any) => {
 
                 <AppFooter colorScheme={props.colorScheme} />
             </div>
-
-            <AppRightMenu rightMenuActive={rightMenuActive} onRightMenuClick={onRightMenuClick} onRightMenuActiveChange={onRightMenuActiveChange} />
-
-            <AppConfig
-                configActive={configActive}
-                onConfigButtonClick={onConfigButtonClick}
-                onConfigClick={onConfigClick}
-                menuMode={menuMode}
-                changeMenuMode={onMenuModeChange}
-                colorScheme={props.colorScheme}
-                changeColorScheme={props.onColorSchemeChange}
-                theme={props.theme}
-                changeTheme={props.onMenuThemeChange}
-                componentTheme={props.componentTheme}
-                changeComponentTheme={props.onComponentThemeChange}
-                ripple={ripple}
-                onRippleChange={onRippleChange}
-            />
         </div>
         : <Navigate to="/login" replace />;
 };

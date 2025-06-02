@@ -19,5 +19,5 @@ func RunMigrations(db *gorm.DB) {
 
 	dbInstance.AutoMigrate(&models.Usuario{})
 	dbInstance.AutoMigrate(&models.Avaliacao{})
-	dbInstance.AutoMigrate(&models.Cliente{})
+	dbInstance.AutoMigrate(&models.Aluno{})
 }

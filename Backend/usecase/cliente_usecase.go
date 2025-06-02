@@ -2,40 +2,40 @@ package usecase
 
 import "projeto-back/models"
 
-type clienteUsecase struct {
-	clienteRepository models.ClienteRepository
+type alunoUsecase struct {
+	alunoRepository models.AlunoRepository
 }
 
-func NovoClienteUsecase(clienteRepository models.ClienteRepository) models.ClienteUsecase {
-	return &clienteUsecase{
-		clienteRepository: clienteRepository,
+func NovoAlunoUsecase(alunoRepository models.AlunoRepository) models.AlunoUsecase {
+	return &alunoUsecase{
+		alunoRepository: alunoRepository,
 	}
 }
 
-func (cs *clienteUsecase) CriarCliente(cliente *models.Cliente) error {
-	return cs.clienteRepository.CriarCliente(cliente)
+func (cs *alunoUsecase) CriarAluno(aluno *models.Aluno) error {
+	return cs.alunoRepository.CriarAluno(aluno)
 }
 
-func (cs *clienteUsecase) BuscarTodosClientes() (*[]models.Cliente, error) {
-	return cs.clienteRepository.BuscarTodosClientes()
+func (cs *alunoUsecase) BuscarTodosAlunos() (*[]models.Aluno, error) {
+	return cs.alunoRepository.BuscarTodosAlunos()
 }
 
-func (cs *clienteUsecase) BuscarClientePorId(id uint) (*models.Cliente, error) {
-	return cs.clienteRepository.BuscarClientePorId(id)
+func (cs *alunoUsecase) BuscarAlunoPorId(id uint) (*models.Aluno, error) {
+	return cs.alunoRepository.BuscarAlunoPorId(id)
 }
 
-func (cs *clienteUsecase) BuscarClientePorEmail(email string) (*models.Cliente, error) {
-	return cs.clienteRepository.BuscarClientePorEmail(email)
+func (cs *alunoUsecase) BuscarAlunoPorEmail(email string) (*models.Aluno, error) {
+	return cs.alunoRepository.BuscarAlunoPorEmail(email)
 }
 
-func (cs *clienteUsecase) EditarCliente(cliente *models.Cliente, id uint) error {
-	return cs.clienteRepository.EditarCliente(cliente, id)
+func (cs *alunoUsecase) EditarAluno(aluno *models.Aluno, id uint) error {
+	return cs.alunoRepository.EditarAluno(aluno, id)
 }
 
-func (cs *clienteUsecase) DeletarCliente(id uint) error {
-	return cs.clienteRepository.DeletarCliente(id)
+func (cs *alunoUsecase) DeletarAluno(id uint) error {
+	return cs.alunoRepository.DeletarAluno(id)
 }
 
-func (cs *clienteUsecase) ExisteClientePorId(id uint) error {
-	return cs.clienteRepository.ExisteClientePorId(id)
+func (cs *alunoUsecase) ExisteAlunoPorId(id uint) error {
+	return cs.alunoRepository.ExisteAlunoPorId(id)
 }

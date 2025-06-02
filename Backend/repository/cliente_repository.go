@@ -6,63 +6,63 @@ import (
 	"gorm.io/gorm"
 )
 
-type clienteRepository struct {
+type alunoRepository struct {
 	database *gorm.DB
 }
 
-func NovoClienteRepository(db *gorm.DB) models.ClienteRepository {
-	return &clienteRepository{
+func NovoAlunoRepository(db *gorm.DB) models.AlunoRepository {
+	return &alunoRepository{
 		database: db,
 	}
 }
 
-func (cr *clienteRepository) CriarCliente(cliente *models.Cliente) error {
-	err := cr.database.Create(cliente).Error
+func (cr *alunoRepository) CriarAluno(aluno *models.Aluno) error {
+	err := cr.database.Create(aluno).Error
 	return err
 }
 
-func (cr *clienteRepository) BuscarTodosClientes() (*[]models.Cliente, error) {
-	var clientes *[]models.Cliente
-	err := cr.database.Select("id", "nome", "telefone", "email").Preload("Avaliacoes").Find(&clientes).Error
-	return clientes, err
+func (cr *alunoRepository) BuscarTodosAlunos() (*[]models.Aluno, error) {
+	var alunos *[]models.Aluno
+	err := cr.database.Select("id", "nome", "descricao", "telefone", "email").Preload("Avaliacoes").Find(&alunos).Error
+	return alunos, err
 }
 
-func (cr *clienteRepository) BuscarClientePorId(id uint) (*models.Cliente, error) {
-	var cliente *models.Cliente
-	err := cr.database.Select("id", "nome", "telefone", "email").Preload("Avaliacoes").First(&cliente, id).Error
+func (cr *alunoRepository) BuscarAlunoPorId(id uint) (*models.Aluno, error) {
+	var aluno *models.Aluno
+	err := cr.database.Select("id", "nome", "descricao", "telefone", "email").Preload("Avaliacoes").First(&aluno, id).Error
 
-	return cliente, err
+	return aluno, err
 }
 
-func (cr *clienteRepository) BuscarClientePorEmail(email string) (*models.Cliente, error) {
-	var cliente *models.Cliente
-	err := cr.database.Where(models.Cliente{Email: email}).Preload("Avaliacoes").First(&cliente).Error
-	return cliente, err
+func (cr *alunoRepository) BuscarAlunoPorEmail(email string) (*models.Aluno, error) {
+	var aluno *models.Aluno
+	err := cr.database.Where(models.Aluno{Email: email}).Preload("Avaliacoes").First(&aluno).Error
+	return aluno, err
 }
 
-func (cr *clienteRepository) EditarCliente(cliente *models.Cliente, id uint) error {
-	err := cr.database.Model(&cliente).Where("id = ?", id).Updates(cliente).Error
+func (cr *alunoRepository) EditarAluno(aluno *models.Aluno, id uint) error {
+	err := cr.database.Model(&aluno).Where("id = ?", id).Updates(aluno).Error
 	return err
 }
 
-func (cr *clienteRepository) DeletarCliente(id uint) error {
-	var cliente *models.Cliente
-	err := cr.database.Preload("Avaliacoes").First(&cliente, id).Error
+func (cr *alunoRepository) DeletarAluno(id uint) error {
+	var aluno *models.Aluno
+	err := cr.database.Preload("Avaliacoes").First(&aluno, id).Error
 	if err != nil {
 		return err
 	}
 
-	err = cr.database.Where("cliente_id = ?", cliente.ID).Delete(&cliente.Avaliacoes).Error
+	err = cr.database.Where("aluno_id = ?", aluno.ID).Delete(&aluno.Avaliacoes).Error
 	if err != nil {
 		return err
 	}
 
-	err = cr.database.Delete(&cliente).Error
+	err = cr.database.Delete(&aluno).Error
 	return err
 }
 
-func (cr *clienteRepository) ExisteClientePorId(id uint) error {
-	var cliente *models.Cliente
-	err := cr.database.First(&cliente, id).Error
+func (cr *alunoRepository) ExisteAlunoPorId(id uint) error {
+	var aluno *models.Aluno
+	err := cr.database.First(&aluno, id).Error
 	return err
 }

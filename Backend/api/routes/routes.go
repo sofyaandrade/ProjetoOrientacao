@@ -27,9 +27,9 @@ func RouterConfiguracao(db *gorm.DB, router *gin.Engine, enforcer *casbin.Enforc
 	protectedUsuarioPerfilRouter.Use(middlewares.JwtAuthMiddleware(secretKey))
 	UsuarioPerfilRoute(db, protectedUsuarioPerfilRouter)
 
-	protectedClienteRouter := router.Group("/cliente")
-	protectedClienteRouter.Use(middlewares.JwtAuthMiddleware(secretKey))
-	ClienteRouter(db, protectedClienteRouter)
+	protectedAlunoRouter := router.Group("/aluno")
+	protectedAlunoRouter.Use(middlewares.JwtAuthMiddleware(secretKey))
+	AlunoRouter(db, protectedAlunoRouter)
 
 	protectedAvaliacaoRouter := router.Group("/avaliacao")
 	protectedAvaliacaoRouter.Use(middlewares.JwtAuthMiddleware(secretKey))

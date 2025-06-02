@@ -208,7 +208,7 @@ const AppMenu = (props: any) => {
         >
             <div className="menu-logo">
                 <button className="logo p-link">
-                    <img  className="simbolo-menu" alt="logo" onClick={() => navigate('/')} />
+                    {/* <img  className="simbolo-menu" alt="logo" onClick={() => navigate('/')} /> */}
                 </button>
                 {/* <button className="app-name p-link">
                     <img/>

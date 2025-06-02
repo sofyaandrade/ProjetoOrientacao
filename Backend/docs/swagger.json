@@ -5,7 +5,7 @@
         "contact": {},
         "version": "1.0"
     },
-    "host": "localhost:8420",
+    "host": "localhost:2003",
     "paths": {
         "/login/": {
             "post": {

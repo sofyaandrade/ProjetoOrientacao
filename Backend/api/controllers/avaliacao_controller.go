@@ -55,25 +55,25 @@ func (ac *AvaliacaoController) BuscarAvaliacaoPorId(c *gin.Context) {
 
 	id := c.Params.ByName("id")
 
-	cliente, err := ac.AvaliacaoUsecase.BuscarAvaliacaoPorId(utils.StringToUint(id))
+	aluno, err := ac.AvaliacaoUsecase.BuscarAvaliacaoPorId(utils.StringToUint(id))
 	if err != nil {
 		utils.ErroLog.Println("Erro ao buscar avaliacao por id", err.Error())
 		c.JSON(http.StatusBadRequest, models.ErrorResponse{Error: err.Error()})
 		return
 	}
 
-	if cliente == nil {
+	if aluno == nil {
 		c.JSON(http.StatusNotFound, models.ErrorResponse{Error: "Avaliação" + id + "não encontrada"})
 		return
 	}
 
-	c.JSON(http.StatusOK, cliente)
+	c.JSON(http.StatusOK, aluno)
 }
 
-func (ac *AvaliacaoController) BuscarAvaliacoesPorCliente(c *gin.Context) {
+func (ac *AvaliacaoController) BuscarAvaliacoesPorAluno(c *gin.Context) {
 	id := c.Params.ByName("id")
 
-	avaliacoes, err := ac.AvaliacaoUsecase.BuscarAvaliacoesPorCliente(utils.StringToUint(id))
+	avaliacoes, err := ac.AvaliacaoUsecase.BuscarAvaliacoesPorAluno(utils.StringToUint(id))
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, models.ErrorResponse{Error: "Erro ao buscar avaliações"})
 		return

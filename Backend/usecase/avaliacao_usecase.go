@@ -24,8 +24,8 @@ func (cs *avaliacaoUsecase) BuscarAvaliacaoPorId(id uint) (*models.Avaliacao, er
 	return cs.avaliacaoRepository.BuscarAvaliacaoPorId(id)
 }
 
-func (cs *avaliacaoUsecase) BuscarAvaliacoesPorCliente(id uint) ([]models.Avaliacao, error) {
-	return cs.avaliacaoRepository.BuscarAvaliacoesPorCliente(id)
+func (cs *avaliacaoUsecase) BuscarAvaliacoesPorAluno(id uint) ([]models.Avaliacao, error) {
+	return cs.avaliacaoRepository.BuscarAvaliacoesPorAluno(id)
 }
 
 func (cs *avaliacaoUsecase) EditarAvaliacao(avaliacao *models.Avaliacao, id uint) error {

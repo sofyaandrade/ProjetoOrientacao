@@ -138,3 +138,57 @@ ERRO: 2025/04/21 15:29:04 cliente_controller.go:68: Erro ao buscar o cliete reco
 ERRO: 2025/04/21 15:29:28 cliente_controller.go:22: Erro ao ler JSON json: cannot unmarshal number into Go struct field Cliente.telefone of type string
 ERRO: 2025/04/21 15:29:43 cliente_controller.go:22: Erro ao ler JSON json: cannot unmarshal number into Go struct field Cliente.telefone of type string
 AÇÃO DO USUARIO: 2025/04/21 15:29:55 cliente_controller.go:41: Cliente cadastrado com sucesso 
+AÇÃO DO SISTEMA: 2025/05/27 12:34:29 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/05/27 12:34:29 gin.go:57: Arquivo front não encontrado
+AÇÃO DO SISTEMA: 2025/05/29 18:59:43 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/05/29 18:59:43 gin.go:57: Arquivo front não encontrado
+AÇÃO DO SISTEMA: 2025/05/29 19:05:40 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/05/29 19:05:40 gin.go:57: Arquivo front não encontrado
+ERRO: 2025/05/29 19:05:48 login_controller.go:40: Erro ao buscar usuário por email record not found
+ERRO: 2025/05/29 19:05:49 login_controller.go:40: Erro ao buscar usuário por email record not found
+AÇÃO DO SISTEMA: 2025/05/29 20:07:15 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/05/29 20:07:15 gin.go:57: Arquivo front não encontrado
+AÇÃO DO SISTEMA: 2025/05/29 20:08:16 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/05/29 20:08:17 gin.go:57: Arquivo front não encontrado
+AÇÃO DO SISTEMA: 2025/05/29 20:09:07 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/05/29 20:09:07 gin.go:57: Arquivo front não encontrado
+AÇÃO DO SISTEMA: 2025/05/29 20:12:06 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/05/29 20:12:07 gin.go:57: Arquivo front não encontrado
+AÇÃO DO SISTEMA: 2025/05/29 20:34:40 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/05/29 20:34:40 gin.go:57: Arquivo front não encontrado
+AÇÃO DO SISTEMA: 2025/05/29 20:36:34 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/05/29 20:36:34 seeder_usuarios.go:38: não foi possível inserir usuários na tabela:  ERROR: insert or update on table "usuarios" violates foreign key constraint "fk_usuario_perfils_usuarios" (SQLSTATE 23503)
+ERRO: 2025/05/29 20:36:34 gin.go:57: Arquivo front não encontrado
+ERRO: 2025/05/29 20:37:45 aluno_controller.go:22: Erro ao ler JSON json: cannot unmarshal number into Go struct field Aluno.telefone of type string
+AÇÃO DO SISTEMA: 2025/05/29 20:43:33 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/05/29 20:43:33 gin.go:57: Arquivo front não encontrado
+AÇÃO DO SISTEMA: 2025/05/29 20:45:37 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/05/29 20:45:37 gin.go:57: Arquivo front não encontrado
+AÇÃO DO USUARIO: 2025/05/29 20:45:56 aluno_controller.go:41: Aluno cadastrado com sucesso 
+AÇÃO DO SISTEMA: 2025/05/29 21:11:03 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/05/29 21:11:03 gin.go:57: Arquivo front não encontrado
+AÇÃO DO USUARIO: 2025/05/29 21:16:49 aluno_controller.go:110: Aluno criado com sucesso
+AÇÃO DO USUARIO: 2025/05/29 21:18:17 aluno_controller.go:107: Aluno editado de:  &{{1 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC {0001-01-01 00:00:00 +0000 UTC false}} sofya  44444444444 sofya.bruzadelli17@gamil.com []} para:  sofya bruzadelli borges seidler de andrade
+AÇÃO DO USUARIO: 2025/05/29 21:18:17 aluno_controller.go:110: Aluno criado com sucesso
+AÇÃO DO SISTEMA: 2025/05/29 21:20:12 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/05/29 21:20:12 gin.go:57: Arquivo front não encontrado
+AÇÃO DO SISTEMA: 2025/05/29 21:20:56 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/05/29 21:20:56 gin.go:57: Arquivo front não encontrado
+AÇÃO DO SISTEMA: 2025/05/29 21:32:41 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/05/29 21:32:41 gin.go:57: Arquivo front não encontrado
+AÇÃO DO SISTEMA: 2025/05/30 10:33:51 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/05/30 10:33:51 gin.go:57: Arquivo front não encontrado
+AÇÃO DO USUARIO: 2025/05/30 11:50:59 avaliacao_controller.go:33: Avaliação criada com sucesso
+AÇÃO DO SISTEMA: 2025/05/30 13:01:38 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/05/30 13:01:38 gin.go:57: Arquivo front não encontrado
+AÇÃO DO USUARIO: 2025/05/30 13:02:30 avaliacao_controller.go:33: Avaliação criada com sucesso
+ERRO: 2025/05/30 13:04:28 avaliacao_controller.go:22: Erro ao ler JSON json: cannot unmarshal array into Go value of type models.Avaliacao
+AÇÃO DO SISTEMA: 2025/05/30 13:10:53 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/05/30 13:10:53 gin.go:57: Arquivo front não encontrado
+AÇÃO DO USUARIO: 2025/05/30 13:12:39 avaliacao_controller.go:33: Avaliação criada com sucesso
+AÇÃO DO USUARIO: 2025/05/30 13:13:18 avaliacao_controller.go:33: Avaliação criada com sucesso
+AÇÃO DO USUARIO: 2025/05/30 13:15:13 avaliacao_controller.go:33: Avaliação criada com sucesso
+AÇÃO DO USUARIO: 2025/05/30 13:16:42 avaliacao_controller.go:33: Avaliação criada com sucesso
+AÇÃO DO USUARIO: 2025/05/30 13:17:26 avaliacao_controller.go:33: Avaliação criada com sucesso
+AÇÃO DO SISTEMA: 2025/06/02 18:41:02 database.go:31: conectou ao banco de dados postgres
+ERRO: 2025/06/02 18:41:02 gin.go:57: Arquivo front não encontrado

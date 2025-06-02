@@ -20,12 +20,12 @@ export default interface IAvaliacao {
 	//dobras cutaneas
 	//homens
 	Torax: number,
-	abdomem_masc: number,
+	AbdomenMasc: number,
 	//Coxa       float64 `json:"Coxa"`
 
 	//dobras cutaneas
 	//mulheres
-	SupraLiaca: number,
+	SupraIliaca: number,
 	Triceps: number,
 	Coxa: number,
 }

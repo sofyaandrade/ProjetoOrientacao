@@ -17,7 +17,7 @@ func AvaliacaoRouter(db *gorm.DB, group *gin.RouterGroup) {
 	group.POST("/", ac.NovaAvaliacao)
 	group.GET("/", ac.BuscarTodasAvaliacoes)
 	group.GET("/:id/", ac.BuscarAvaliacaoPorId)
-	group.GET("/cliente/:id/", ac.BuscarAvaliacoesPorCliente)
+	group.GET("/aluno/:id/", ac.BuscarAvaliacoesPorAluno)
 	group.PATCH("/:id/", ac.EditarAvaliacao)
 	group.DELETE("/:id/", ac.DeletarAvaliacao)
 }

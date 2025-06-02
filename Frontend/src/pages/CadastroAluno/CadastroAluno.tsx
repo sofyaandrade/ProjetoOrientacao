@@ -32,7 +32,7 @@ export function CadastroAluno() {
         Avaliacao: {
             ID: 0,
             Abdomen: 0,
-            abdomem_masc: 0,
+            AbdomenMasc: 0,
             AnteBracoDireito: 0,
             AnteBracoEsquerdo: 0,
             BracoContraidoDireito: 0,
@@ -46,7 +46,7 @@ export function CadastroAluno() {
             PernaDireita: 0,
             PernaEsquerda: 0,
             Quadril: 0,
-            SupraLiaca: 0,
+            SupraIliaca: 0,
             Torax: 0,
             ToraxExpirado: 0,
             ToraxInspirado: 0,
@@ -69,31 +69,10 @@ export function CadastroAluno() {
     const toast = useRef<any>(null);
     const [atualizaSenhaCheckbox, setAtualizaSenhaCheckbox] = useState(false);
        
-       
-        //    useEffect(() => {
-        //        dispatch(getCliente()).then((data) => {setCliente(data.payload)})
-        //    }, [])
-       
-        //    const salvarCliente = () => {
-        //        setSubmitted(true)
-        //        dispatch(addCliente(aluno))
-        //        .unwrap()
-        //        .then(() => {
-        //          toast.current.show({ severity: 'success', summary: 'Sucesso', life: 3000 });
-        //        })
-        //        .catch((err) => {
-        //          console.error('Erro ao salvar aluno:', err);
-        //          toast.current.show({ severity: 'error', summary: 'Erro ao salvar aluno', detail: err.message, life: 5000 });
-        //        });
-        //    }
-
+//não ta trazendo as infos na primeira carregada
     useEffect(() => {
         dispatch(getAlunos()).then((data) => setListaAlunos(data.payload));
-    }, [])
-
-    useEffect(() => {
-        dispatch(getAlunos()).then((data) => setListaAlunos(data.payload))
-    }, [listaAlunos])
+    }, [setListaAlunos])
 
     const openNew = () => {
         setAtualizaSenhaCheckbox(true);
@@ -200,7 +179,7 @@ export function CadastroAluno() {
         return rowData.ID;
     };
 
-    const nomeBodyTemplate = (rowData: IAluno) => {
+    const NomeBodyTemplate = (rowData: IAluno) => {
         return rowData.Nome;
     };
 
@@ -220,7 +199,7 @@ export function CadastroAluno() {
     }
 
     const telefoneBodyTemplate = (rowData: IAluno) => {
-        let telefone = formatarTelefone(rowData.Telefone.toString())
+        let telefone = formatarTelefone(rowData?.Telefone.toString())
         return (
             <>
                 {telefone}
@@ -229,12 +208,13 @@ export function CadastroAluno() {
     };
 
     const emailBodyTemplate = (rowData: IAluno) => {
+        console.log(rowData.Email)
         return rowData.Email;
     };
 
-    // const roleBodyTemplate = (rowData: IAluno) => {
-    //     return rowData.AlunoPerfil.Descricao;
-    // };
+    const roleBodyTemplate = (rowData: IAluno) => {
+        return rowData.Descricao;
+    };
 
     const actionBodyTemplate = (rowData: any) => {
         return (
@@ -291,25 +271,24 @@ export function CadastroAluno() {
                             emptyMessage={'Nenhum aluno cadastrado'}
                             header={header}
                         >
-                            <Column field="ID" header={'ID'} sortable body={idBodyTemplate} headerStyle={{ width: '10%', minWidth: '4rem' }}></Column>
-                            <Column field="Nome" header={'Nome'} sortable body={nomeBodyTemplate} headerStyle={{ width: '30%', minWidth: '8rem' }}></Column>
-                            <Column field="Telefone" header={'Telefone'} sortable body={telefoneBodyTemplate} headerStyle={{ width: '20%', minWidth: '8rem' }}></Column>
-                            <Column field="Email" header={'Email'} sortable body={emailBodyTemplate} headerStyle={{ width: '20%', minWidth: '10rem' }}></Column>
-                            {/* <Column field="AlunoPerfil.Descricao" header={''} sortable body={roleBodyTemplate} headerStyle={{ width: '20%', minWidth: '10rem' }}></Column> */}
+                            <Column field="ID" header={'ID'} sortable  headerStyle={{ width: '3%', minWidth: '4rem' }}></Column>
+                            <Column field="Nome" header={'Nome'} sortable headerStyle={{ width: '15%', minWidth: '8rem' }}></Column>
+                            <Column field="Telefone" header={'Telefone'} sortable body={telefoneBodyTemplate} headerStyle={{ width: '5%', minWidth: '8rem' }}></Column>
+                            <Column field="Email" header={'Email'} sortable body={emailBodyTemplate} headerStyle={{ width: '10%', minWidth: '10rem' }}></Column>
+                            <Column field="Descricao" header={'Descricao'} sortable body={roleBodyTemplate} headerStyle={{ width: '20%', minWidth: '10rem' }}></Column>
                             <Column headerStyle={{ width: '10%', minWidth: '10%' }} body={actionBodyTemplate}></Column>
                         </DataTable>
 
                         <Dialog visible={alunoDialog} style={{ width: '450px' }} header={'Detalhes Aluno'} modal className="p-fluid" footer={alunoDialogFooter} onHide={hideDialog}>
                             <div className="field">
-                                <label htmlFor="nome">Nome</label>
-                                <InputText id="nome" value={aluno.Nome} required autoFocus onChange={(e) => setAluno({...aluno, Nome: e.target.value})} className={classNames({ 'p-invalid': submitted && !aluno.Nome })} />
+                                <label htmlFor="Nome">Nome</label>
+                                <InputText id="Nome" value={aluno.Nome} required autoFocus onChange={(e) => setAluno({...aluno, Nome: e.target.value})} className={classNames({ 'p-invalid': submitted && !aluno.Nome })} />
                                 {submitted && !aluno.Nome && <small className="p-invalid">{'Nome obrigatório'}</small>}
                             </div>
                             <div className="formgrid grid">
                                 <div className="field col">
                                     <label htmlFor="telefone">Telefone</label>
                                     <div className="mb-1 mt-1">
-                                        <ToggleButton onLabel="Fixo" offLabel="Celular" onIcon="pi pi-phone" offIcon="pi pi-mobile" checked={checked} onChange={(e) => {setChecked(e.value); setAluno({...aluno, Telefone: 0}); }} />
                                     </div>
                                         <InputMask id="telefone" mask={telefoneMask} value={aluno.Telefone === 0 ? "" : aluno.Telefone.toString()} onChange={onTelefoneChange} onFocus={onTelefoneFocus} placeholder={checked ? "(99) 9999-9999" : "(99) 99999-9999"} unmask={true} />
                                         {submitted && !aluno.Telefone && (
@@ -321,6 +300,11 @@ export function CadastroAluno() {
                                 <label htmlFor="email">Email</label>
                                 <InputText id="email" value={aluno.Email} required onChange={(e) => setAluno({...aluno, Email: e.target.value})} className={classNames({ 'p-invalid': submitted && !aluno.Email })} />
                                 {submitted && !aluno.Email && <small className="p-invalid">Email obrigatório</small>}
+                            </div>
+                            <div className="field">
+                                <label htmlFor="observacao">Nome</label>
+                                <InputText id="observacao" value={aluno.Descricao} required autoFocus onChange={(e) => setAluno({...aluno, Descricao: e.target.value})} className={classNames({ 'p-invalid': submitted && !aluno.Descricao })} />
+                                {submitted && !aluno.Descricao && <small className="p-invalid">{'Descricao obrigatório'}</small>}
                             </div>
 
                         </Dialog>

@@ -1,0 +1,9 @@
+.filtro {
+    width: 100%;
+    margin-bottom: 4%;
+}
+
+.campo-filtro {
+    margin-right: 2%;
+    display: inline-block;
+}

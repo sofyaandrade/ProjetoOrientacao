@@ -18,7 +18,7 @@ definitions:
       RefreshToken:
         type: string
     type: object
-host: localhost:8420
+host: localhost:2003
 info:
   contact: {}
   title: PROJETO-Back

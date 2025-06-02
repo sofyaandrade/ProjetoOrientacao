@@ -3,6 +3,7 @@ import usuarioLogado from './reducers/usuarioLogado';
 import usuarios from './reducers/usuarios';
 
 
+
 const store = configureStore({
     reducer: {
         usuarioLogado: usuarioLogado,

@@ -33,7 +33,7 @@ const AppInlineMenu = (props: any) => {
             {!isMobile() && (isStatic() || isSlim() || isSidebar() || isOverlay()) && (
                 <div className={classNames('layout-inline-menu', { 'layout-inline-menu-active': props.activeInlineProfile })}>
                     <button className="layout-inline-menu-action p-link" onClick={props.onChangeActiveInlineMenu}>
-                        <img  alt="avatar" style={{ width: '44px', height: '44px', objectFit: 'scale-down' }} />
+                        {/* <img  alt="avatar" style={{ width: '44px', height: '44px', objectFit: 'scale-down' }} /> */}
                         <span className="layout-inline-menu-text">Usuário</span>
                         <i className="layout-inline-menu-icon pi pi-angle-down"></i>
                     </button>

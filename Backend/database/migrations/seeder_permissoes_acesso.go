@@ -12,6 +12,7 @@ var administradorPolicy = [][]string{
 	{"ADMINISTRADOR", "/*", "(GET)|(POST)|(PATCH)|(DELETE)|(PUT)|(OPTIONS)"},
 }
 
+// vai virar instrutor pq aluno n tem acesso
 var clientePolicy = [][]string{
 	{"CLIENTE", "/*", "(GET)|(POST)|(PATCH)|(DELETE)|(PUT)|(OPTIONS)"},
 }
