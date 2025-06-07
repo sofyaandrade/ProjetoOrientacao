@@ -4,7 +4,7 @@ import { Navigate, Outlet, useLocation } from 'react-router-dom';
 
 import AppTopbar from './AppTopbar';
 import AppFooter from './AppFooter';
-import AppMenu from './AppMenu';
+
 
 import PrimeReact from 'primereact/api';
 import { Tooltip } from 'primereact/tooltip';
@@ -42,10 +42,10 @@ const App = (props: any) => {
 
     const standaloneAppMenuItens = [
         {
-            label: 'Home',
+            label: 'Menu Principal',
             icon: 'pi pi-home',
-            to: '/'
-        },
+            to: '/menu-principal'
+        },   
 
         {
             label: 'Aluno',
@@ -66,10 +66,10 @@ const App = (props: any) => {
 
    const fullAppMenuItens = [
     {
-        label: 'Home',
+        label: 'Menu Principal',
         icon: 'pi pi-home',
-        to: '/'
-    },
+        to: '/menu-principal'
+    },      
     {
         label: 'Aluno',
         icon: 'pi pi-cog',
@@ -345,44 +345,7 @@ const App = (props: any) => {
             <Tooltip ref={copyTooltipRef} target=".block-action-copy" position="bottom" content="Copied to clipboard" event="focus" />
 
             <div className="layout-main">
-                <AppTopbar
-                    items={configMenu()}
-                    menuMode={menuMode}
-                    colorScheme={props.colorScheme}
-                    menuActive={menuActive}
-                    topbarMenuActive={topbarMenuActive}
-                    activeInlineProfile={activeInlineProfile}
-                    onTopbarItemClick={onTopbarItemClick}
-                    onMenuButtonClick={onMenuButtonClick}
-                    onSidebarMouseOver={onSidebarMouseOver}
-                    onSidebarMouseLeave={onSidebarMouseLeave}
-                    onToggleMenu={onToggleMenu}
-                    onChangeActiveInlineMenu={onChangeActiveInlineMenu}
-                    onMenuClick={onMenuClick}
-                    onMenuItemClick={onMenuItemClick}
-                    onRootMenuItemClick={onRootMenuItemClick}
-                    resetActiveIndex={resetActiveIndex}
-                />
-
-                <AppMenu
-                    model={configMenu()}
-                    onRootMenuItemClick={onRootMenuItemClick}
-                    onMenuItemClick={onMenuItemClick}
-                    onToggleMenu={onToggleMenu}
-                    onMenuClick={onMenuClick}
-                    menuMode={menuMode}
-                    colorScheme={props.colorScheme}
-                    menuActive={menuActive}
-                    sidebarActive={sidebarActive}
-                    sidebarStatic={sidebarStatic}
-                    pinActive={pinActive}
-                    onSidebarMouseLeave={onSidebarMouseLeave}
-                    onSidebarMouseOver={onSidebarMouseOver}
-                    activeInlineProfile={activeInlineProfile}
-                    onChangeActiveInlineMenu={onChangeActiveInlineMenu}
-                    resetActiveIndex={resetActiveIndex}
-                />
-
+                
                 <div className="layout-main-content">
                     <Outlet />
                 </div>
@@ -394,3 +357,4 @@ const App = (props: any) => {
 };
 
 export default App;
+

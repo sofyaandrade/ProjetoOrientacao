@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import AppMenu from './AppMenu';
 import { classNames } from 'primereact/utils';
 import { AuthContext } from './context/auth';
 
@@ -20,22 +19,7 @@ const AppTopbar = (props: any) => {
                         <i className="pi pi-bars"></i>
                     </button>
                 </div>
-
-                <AppMenu
-                    model={props.items}
-                    menuMode={props.menuMode}
-                    colorScheme={props.colorScheme}
-                    menuActive={props.menuActive}
-                    activeInlineProfile={props.activeInlineProfile}
-                    onSidebarMouseOver={props.onSidebarMouseOver}
-                    onSidebarMouseLeave={props.onSidebarMouseLeave}
-                    toggleMenu={props.onToggleMenu}
-                    onChangeActiveInlineMenu={props.onChangeActiveInlineMenu}
-                    onMenuClick={props.onMenuClick}
-                    onRootMenuItemClick={props.onRootMenuItemClick}
-                    onMenuItemClick={props.onMenuItemClick}
-                />
-
+         
                 <div className="layout-topbar-right">
                     <ul className="layout-topbar-right-items">
                         <li id="profile" className={classNames('profile-item', { 'active-topmenuitem': props.topbarMenuActive })}>

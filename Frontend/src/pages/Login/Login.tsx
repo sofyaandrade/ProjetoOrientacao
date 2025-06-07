@@ -39,7 +39,7 @@ export const Login = (props: any) => {
 
 
     if (signed) {
-        return <Navigate to="/"></Navigate>
+        return <Navigate to="/menu-principal"></Navigate>
     } else {
 
         return (

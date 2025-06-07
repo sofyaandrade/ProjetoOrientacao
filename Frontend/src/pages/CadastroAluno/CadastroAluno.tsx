@@ -16,6 +16,7 @@ import { Checkbox } from 'primereact/checkbox';
 import IAvaliacao from '../../interface/IAvaliacao/IAvaliacao';
 import ICliente from '../../interface/IAluno/IAluno';
 import { addAlunos, deleteAlunos, getAlunos, updateAlunos } from '../../service/alunoService';
+import BotaoVoltarMenu from '../../componentes/BotaoVoltarMenu';
 
 
 export function CadastroAluno() {
@@ -319,6 +320,9 @@ export function CadastroAluno() {
                                 )}
                             </div>
                         </Dialog>
+
+                        <BotaoVoltarMenu />
+
 
                     </div>
                 </div>

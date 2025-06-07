@@ -6,9 +6,10 @@ import App from '../App';
 import { Login } from '../pages/Login/Login';
 import { isStandalone } from '../utils/envConfig';
 import { NotFound } from '../pages/NotFound';
-import { Home } from '../pages/Home/Home';
 import { CadastroAvaliacao } from '../pages/CadastroAvaliacao/CadastroAvaliacao';
 import { CadastroAluno } from '../pages/CadastroAluno/CadastroAluno';
+import MainMenu from '../MainMenu';
+import { CadastroUsuario } from '../pages/CadastroInstrutor/CadastroInstrutor';
 
 export const AppRouter = (props: any) => {
 
@@ -18,24 +19,28 @@ export const AppRouter = (props: any) => {
     const standaloneAppRoutes =
         <>
             <Route element={<RequireAuth allowedRoles={[ADMINISTRADOR, CLIENTE]} />}>
-                <Route index element={<Home colorScheme={props.colorScheme} />} />
+                <Route index element={<MainMenu  />} />
                 <Route path="*" element={<NotFound />} />
             </Route>
         </>
 
     const fullAppRoutes =
         <>
-            <Route element={<RequireAuth allowedRoles={[ADMINISTRADOR, CLIENTE]} />}>
+            {/* <Route element={<RequireAuth allowedRoles={[ADMINISTRADOR, CLIENTE]} />}>
                 <Route index element={<Home colorScheme={props.colorScheme} />} />
+            </Route> */}
+
+            <Route element={<RequireAuth allowedRoles={[ADMINISTRADOR, CLIENTE]} />}>
+                <Route path='menu-principal' element={<MainMenu />} />
             </Route>
 
             <Route element={<RequireAuth allowedRoles={[ADMINISTRADOR, CLIENTE]} />}>
                 <Route path='cadastro-aluno' element={<CadastroAluno />} />
             </Route>
 
-            {/* <Route element={<RequireAuth allowedRoles={[ADMINISTRADOR, CLIENTE]} />}>
-                <Route path='cadastro-instrutor' element={<CadastroInstrutor />} />
-            </Route> */}
+            <Route element={<RequireAuth allowedRoles={[ADMINISTRADOR, CLIENTE]} />}>
+                <Route path='cadastro-instrutor' element={<CadastroUsuario />} />
+            </Route>
 
             <Route element={<RequireAuth allowedRoles={[ADMINISTRADOR, CLIENTE]} />}>
                 <Route path='cadastro-avaliacao' element={<CadastroAvaliacao />} />

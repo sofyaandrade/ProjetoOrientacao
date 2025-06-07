@@ -14,6 +14,7 @@ import { useSelector } from "react-redux";
 import { Fieldset } from 'primereact/fieldset';
 import { Dropdown } from "primereact/dropdown";
 import { InputNumber } from 'primereact/inputnumber';
+import BotaoVoltarMenu from "../../componentes/BotaoVoltarMenu";
 
 
 export const CadastroAvaliacao = (props: any) => {
@@ -274,6 +275,8 @@ export const CadastroAvaliacao = (props: any) => {
                 label={'Salvar'} onClick={() => { salvarAvaliacao() }} />
                 {submitted}
             </div>
+            <BotaoVoltarMenu />
+
         </>
     )
 }
