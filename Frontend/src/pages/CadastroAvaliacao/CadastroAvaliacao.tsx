@@ -15,6 +15,7 @@ import { Fieldset } from 'primereact/fieldset';
 import { Dropdown } from "primereact/dropdown";
 import { InputNumber } from 'primereact/inputnumber';
 import BotaoVoltarMenu from "../../componentes/BotaoVoltarMenu";
+import BotaoSair from "../../componentes/BotãoSair";
 
 
 export const CadastroAvaliacao = (props: any) => {
@@ -276,6 +277,7 @@ export const CadastroAvaliacao = (props: any) => {
                 {submitted}
             </div>
             <BotaoVoltarMenu />
+            <BotaoSair />
 
         </>
     )

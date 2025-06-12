@@ -21,6 +21,7 @@ import { InputMask } from "primereact/inputmask";
 import { ToggleButton } from "primereact/togglebutton";
 import { classNames } from 'primereact/utils';
 import BotaoVoltarMenu from "../../componentes/BotaoVoltarMenu";
+import BotaoSair from "../../componentes/BotãoSair";
 
 export function CadastroUsuario() {
     const labelUsuario = 'Usuário'
@@ -162,7 +163,7 @@ export function CadastroUsuario() {
     const leftToolbarTemplate = () => {
         return (
             <>
-                <Button label={'label.novo'} icon="pi pi-plus" className="p-button-success mr-2 mb-2" onClick={openNew} />
+                <Button label={'Novo'} icon="pi pi-plus" className="p-button-success mr-2 mb-2" onClick={openNew} />
             </>
         );
     };
@@ -200,14 +201,14 @@ export function CadastroUsuario() {
         return '';
     }
 
-    //   const telefoneBodyTemplate = (rowData: IUsuario) => {
-    //         let telefone = formatarTelefone(rowData?.Telefone.toString())
-    //         return (
-    //             <>
-    //                 {telefone}
-    //             </>
-    //         );
-    //     };
+      const telefoneBodyTemplate = (rowData: IUsuario) => {
+            let telefone = formatarTelefone(rowData?.Telefone.toString())
+            return (
+                <>
+                    {telefone}
+                </>
+            );
+        };
 
     const emailBodyTemplate = (rowData: IUsuario) => {
         return rowData.Email;
@@ -266,16 +267,16 @@ export function CadastroUsuario() {
                             rowsPerPageOptions={[5, 10, 25]}
                             className="datatable-responsive"
                             paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown CurrentPageReport"
-                            currentPageReportTemplate={'{first} - {last} ' + 'label.de' + ' {totalRecords}'}
+                            currentPageReportTemplate={'{first} - {last} ' + ' de ' + ' {totalRecords}'}
                             globalFilter={globalFilter}
-                            emptyMessage={'label.nenhum.usuario.cadastrado'}
+                            emptyMessage={'Nenhum Instrutor Cadastrado'}
                             header={header}
                         >
                             <Column field="ID" header={'Id'} sortable body={idBodyTemplate} headerStyle={{ width: '10%', minWidth: '4rem' }}></Column>
                             <Column field="nome" header={'Nome'} sortable body={nomeBodyTemplate} headerStyle={{ width: '30%', minWidth: '8rem' }}></Column>
-                            <Column field="telefone" header={'Telefone'} sortable  headerStyle={{ width: '20%', minWidth: '8rem' }}></Column>
+                            <Column field="telefone" header={'Telefone'} sortable   body={telefoneBodyTemplate} headerStyle={{ width: '20%', minWidth: '8rem' }}></Column>
                             <Column field="email" header={'Email'} sortable body={emailBodyTemplate} headerStyle={{ width: '20%', minWidth: '10rem' }}></Column>
-                            <Column field="usuario_perfil_id.descricao" header={'Role'} sortable body={roleBodyTemplate} headerStyle={{ width: '20%', minWidth: '10rem' }}></Column>
+                            <Column field="UsuarioPerfilID" header={'Role'} sortable body={roleBodyTemplate} headerStyle={{ width: '20%', minWidth: '10rem' }}></Column>
                             <Column headerStyle={{ width: '10%', minWidth: '10%' }} body={actionBodyTemplate}></Column>
                         </DataTable>
 
@@ -325,7 +326,7 @@ export function CadastroUsuario() {
                             </div>
 
                             <div className="field">
-                                <label className="mb-3">{'label.perfil'}</label>
+                                <label className="mb-3">{'Perfil'}</label>
                                 <div className="formgrid grid">
                                     <Dropdown value={usuario.UsuarioPerfil} options={listaUsuarioPerfil} optionLabel="Descricao" onChange={(e) => onPerfilChange(e)} placeholder="Selecione o tipo" />
                                 </div>
@@ -338,13 +339,14 @@ export function CadastroUsuario() {
                                 <i className="pi pi-exclamation-triangle mr-3" style={{ fontSize: '2rem' }} />
                                 {usuario && (
                                     <span>
-                                        <b>label.deseja.excluir'</b>
+                                        <b>Deseja excluir?</b>
                                     </span>
                                 )}
                             </div>
                         </Dialog>
 
                         <BotaoVoltarMenu />
+                        <BotaoSair />
 
                     </div>
                 </div>

@@ -17,6 +17,7 @@ import IAvaliacao from '../../interface/IAvaliacao/IAvaliacao';
 import ICliente from '../../interface/IAluno/IAluno';
 import { addAlunos, deleteAlunos, getAlunos, updateAlunos } from '../../service/alunoService';
 import BotaoVoltarMenu from '../../componentes/BotaoVoltarMenu';
+import BotaoSair from '../../componentes/BotãoSair';
 
 
 export function CadastroAluno() {
@@ -71,6 +72,10 @@ export function CadastroAluno() {
     const [atualizaSenhaCheckbox, setAtualizaSenhaCheckbox] = useState(false);
        
 //não ta trazendo as infos na primeira carregada
+    // useEffect(() => {
+    //     dispatch(getAlunos()).then((data) => setListaAlunos(data.payload));
+    // }, [])
+
     useEffect(() => {
         dispatch(getAlunos()).then((data) => setListaAlunos(data.payload));
     }, [setListaAlunos])
@@ -303,7 +308,7 @@ export function CadastroAluno() {
                                 {submitted && !aluno.Email && <small className="p-invalid">Email obrigatório</small>}
                             </div>
                             <div className="field">
-                                <label htmlFor="observacao">Nome</label>
+                                <label htmlFor="observacao">Observações</label>
                                 <InputText id="observacao" value={aluno.Descricao} required autoFocus onChange={(e) => setAluno({...aluno, Descricao: e.target.value})} className={classNames({ 'p-invalid': submitted && !aluno.Descricao })} />
                                 {submitted && !aluno.Descricao && <small className="p-invalid">{'Descricao obrigatório'}</small>}
                             </div>
@@ -322,6 +327,8 @@ export function CadastroAluno() {
                         </Dialog>
 
                         <BotaoVoltarMenu />
+                        <BotaoSair />
+
 
 
                     </div>

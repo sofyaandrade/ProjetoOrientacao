@@ -6,11 +6,11 @@ import (
 
 type Usuario struct {
 	gorm.Model
-	Nome            string `json:"nome"`
-	Telefone        int    `json:"telefone"`
-	Email           string `json:"email"`
-	Password        string `json:"password"`
-	UsuarioPerfilID uint   `json:"usuario_perfil_id"`
+	Nome            string `json:"Nome"`
+	Telefone        int    `json:"Telefone"`
+	Email           string `json:"Email"`
+	Password        string `json:"Password"`
+	UsuarioPerfilID uint   `json:"UsuarioPerfilID"`
 	UsuarioPerfil   UsuarioPerfil
 }
 

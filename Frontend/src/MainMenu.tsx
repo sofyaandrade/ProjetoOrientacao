@@ -2,6 +2,7 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "primereact/button";
 import "./MainMenu.css";
+import BotaoSair from "./componentes/BotãoSair";
 
 export default function MainMenu() {
   const navigate = useNavigate();
@@ -32,6 +33,7 @@ export default function MainMenu() {
           className="menu-button"
           onClick={() => navigate("/cadastro-instrutor")}
         />
+        <BotaoSair/>
       </div>
     </div>
   );
