@@ -28,106 +28,12 @@ const App = (props: any) => {
     const [menuActive, setMenuActive] = useState(false);
     const [searchActive, setSearchActive] = useState(false);
     const [topbarMenuActive, setTopbarMenuActive] = useState(false);
-    const [sidebarActive, setSidebarActive] = useState(false);
-    const [pinActive, setPinActive] = useState(false);
-    const [activeInlineProfile, setActiveInlineProfile] = useState(false);
     const [resetActiveIndex, setResetActiveIndex] = useState<boolean>(false);
     const copyTooltipRef = useRef<any>();
     const location = useLocation();
 
     PrimeReact.ripple = true;
 
-    const CLIENTE = 'CLIENTE';
-    const ADMINISTRADOR = 'ADMINISTRADOR';
-
-    const standaloneAppMenuItens = [
-        {
-            label: 'Menu Principal',
-            icon: 'pi pi-home',
-            to: '/menu-principal'
-        },   
-
-        {
-            label: 'Aluno',
-            icon: 'pi pi-cog',
-            to: '/cadastro-aluno'
-        },
-        {
-            label: 'Instrutor',
-            icon: 'pi pi-cog',
-            to: '/cadastro-instrutor'
-        },
-        {
-            label: 'Avaliacao',
-            icon: 'pi pi-cog',
-            to: '/cadastro-avaliacao'
-        },
-    ]
-
-   const fullAppMenuItens = [
-    {
-        label: 'Menu Principal',
-        icon: 'pi pi-home',
-        to: '/menu-principal'
-    },      
-    {
-        label: 'Aluno',
-        icon: 'pi pi-cog',
-        to: '/cadastro-aluno'
-    },
-    {
-        label: 'Instrutor',
-        icon: 'pi pi-cog',
-        to: '/cadastro-instrutor'
-    },
-    {
-        label: 'Avaliacao',
-        icon: 'pi pi-cog',
-        to: '/cadastro-avaliacao'
-    },
-   ]
-
-    const adminClienteAppMenuItens = [
-        {
-            label: 'Home',
-            icon: 'pi pi-home',
-            to: '/'
-        },
-        {
-            label: 'Aluno',
-            icon: 'pi pi-cog',
-            to: '/cadastro-aluno'
-        },
-        {
-            label: 'Instrutor',
-            icon: 'pi pi-cog',
-            to: '/cadastro-instrutor'
-        },
-        {
-            label: 'Avaliacao',
-            icon: 'pi pi-cog',
-            to: '/cadastro-avaliacao'
-        },
-    ];
-
-
-    const configMenu = () => {
-
-        const user = sessionStorage.getItem("Perfil");
-
-        if (isStandalone) {
-            return standaloneAppMenuItens;
-        }
-
-        if (user === ADMINISTRADOR) {
-            return fullAppMenuItens;
-        }
-
-        if (user === CLIENTE) {
-            return adminClienteAppMenuItens;
-        }
-        return fullAppMenuItens;
-    }
 
     let rightMenuClick: any;
     let configClick: any;
@@ -188,117 +94,12 @@ const App = (props: any) => {
         searchClick = false;
     };
 
-    const onMenuModeChange = (menuMode: any) => {
-        setMenuMode(menuMode);
-        setOverlayMenuActive(false);
-    };
-
-    const onRightMenuClick = () => {
-        rightMenuClick = true;
-    };
-
-    const onRightMenuActiveChange = (active: any) => {
-        setRightMenuActive(active);
-    };
-
-    const onConfigClick = () => {
-        configClick = true;
-    };
-
-    const onConfigButtonClick = (event: any) => {
-        setConfigActive((prevState) => !prevState);
-        configClick = true;
-        event.preventDefault();
-    };
-
-    const onRippleChange = (e: any) => {
-        PrimeReact.ripple = e.value;
-        setRipple(e.value);
-    };
-
-    const onMenuButtonClick = (event: any) => {
-        menuClick = true;
-
-        if (isOverlay()) {
-            setOverlayMenuActive((prevState) => !prevState);
-        }
-
-        if (isDesktop()) {
-            setStaticMenuDesktopInactive((prevState) => !prevState);
-        } else {
-            setStaticMenuMobileActive((prevState) => !prevState);
-        }
-
-        event.preventDefault();
-    };
 
     const hideOverlayMenu = () => {
         setOverlayMenuActive(false);
         setStaticMenuMobileActive(false);
     };
 
-    const onTopbarItemClick = (event: any) => {
-        topbarItemClick = true;
-        setTopbarMenuActive((prevState) => !prevState);
-        hideOverlayMenu();
-        event.preventDefault();
-    };
-
-    const onToggleMenu = (event: any) => {
-        menuClick = true;
-
-        if (overlayMenuActive) {
-            setOverlayMenuActive(false);
-        }
-
-        if (sidebarActive) {
-            setSidebarStatic((prevState) => !prevState);
-        }
-
-        event.preventDefault();
-    };
-
-    const onSidebarMouseOver = () => {
-        if (menuMode === 'sidebar' && !sidebarStatic) {
-            setSidebarActive(isDesktop());
-            setTimeout(() => {
-                setPinActive(isDesktop());
-            }, 200);
-        }
-    };
-
-    const onSidebarMouseLeave = () => {
-        if (menuMode === 'sidebar' && !sidebarStatic) {
-            setTimeout(() => {
-                setSidebarActive(false);
-                setPinActive(false);
-            }, 250);
-        }
-    };
-
-    const onMenuClick = () => {
-        menuClick = true;
-    };
-
-    const onChangeActiveInlineMenu = (event: any) => {
-        setActiveInlineProfile((prevState) => !prevState);
-        event.preventDefault();
-    };
-
-    const onRootMenuItemClick = () => {
-        setMenuActive((prevState) => !prevState);
-    };
-
-    const onMenuItemClick = (event: any) => {
-        if (!event.item.items) {
-            hideOverlayMenu();
-            setResetActiveIndex(true);
-        }
-
-        if (!event.item.items && (isHorizontal() || isSlim())) {
-            setMenuActive(false);
-        }
-    };
 
     const isHorizontal = () => {
         return menuMode === 'horizontal';
@@ -306,14 +107,6 @@ const App = (props: any) => {
 
     const isSlim = () => {
         return menuMode === 'slim';
-    };
-
-    const isOverlay = () => {
-        return menuMode === 'overlay';
-    };
-
-    const isDesktop = () => {
-        return window.innerWidth > 991;
     };
 
     const unblockBodyScroll = () => {

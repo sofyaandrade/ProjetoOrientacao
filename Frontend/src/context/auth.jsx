@@ -6,12 +6,10 @@ import { api } from "../service/api";
 import { useAppDispatch } from '../store/hooks';
 import { fetchUsuarioLogado } from "../store/reducers/usuarioLogado";
 import jwt_decode from "jwt-decode";
-
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -36,23 +34,21 @@ export const AuthProvider = ({ children }) => {
         sessionStorage.setItem("AuthAccessToken", response.data.AccessToken);
         sessionStorage.setItem("AuthRefreshToken", response.data.RefreshToken);
 
-        let token = jwt_decode(response.data.AccessToken);
+        const token = jwt_decode(response.data.AccessToken);
         sessionStorage.setItem("Id", token.Id);
         sessionStorage.setItem("Perfil", token.Role);
-        dispatch(fetchUsuarioLogado())
 
+        dispatch(fetchUsuarioLogado());
       }
     } catch (error) {
       console.log(error);
-      return error.response.status
+      return error.response.status;
     }
-    
   };
 
   const singOut = () => {
     sessionStorage.clear();
     setUser(null);
-    return <Navigate to="/login" replace/>;
   };
 
   return (

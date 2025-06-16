@@ -1,23 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button } from 'primereact/button';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/auth';
 
-interface BotaoVoltarMenuProps {
+
+interface BotaoSairProps {
   label?: string;
   className?: string;
 }
 
-const BotaoSair: React.FC<BotaoVoltarMenuProps> = ({ label = "Sair", className = "" }) => {
+const BotaoSair: React.FC<BotaoSairProps> = ({ label = "Sair", className = "" }) => {
   const navigate = useNavigate();
+  const { singOut } = useContext(AuthContext);
 
   const handleClick = () => {
-    navigate('/login');
+    singOut();
+    navigate('/login', { replace: true });
   };
 
   return (
     <Button 
       label={label} 
-      icon="pi pi-arrow-left" 
+      icon="pi pi-sign-out" 
       className={`p-button-secondary ${className}`} 
       onClick={handleClick} 
     />
